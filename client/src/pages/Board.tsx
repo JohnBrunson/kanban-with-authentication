@@ -16,9 +16,18 @@ const Board = () => {
   const [error, setError] = useState(false);
   const [loginCheck, setLoginCheck] = useState(false);
 
+  // const checkLogin = () => {
+  //   if(auth.loggedIn()) {
+  //     setLoginCheck(true);
+  //   }
+  // };
   const checkLogin = () => {
-    if(auth.loggedIn()) {
+    const token = auth.getToken();
+    if (token && !auth.isTokenExpired(token)) {
       setLoginCheck(true);
+    } else {
+      auth.logout();
+      navigate('/login');
     }
   };
 

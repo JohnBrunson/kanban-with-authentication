@@ -21,8 +21,7 @@ export const login = async (req: Request, res: Response) => {
 
   
   const secretKey = process.env.JWT_SECRET_KEY || ''
-  // Set to 8 hours as is a typical workday.
-  const token = jwt.sign({ username }, secretKey, { expiresIn: '8h'});
+  const token = jwt.sign({ username }, secretKey, { expiresIn: '5m'});
   return res.json ({ token });
 };
 

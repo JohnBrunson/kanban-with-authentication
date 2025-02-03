@@ -10,7 +10,7 @@ class AuthService {
   loggedIn() {
     // TODO: return a value that indicates if the user is logged in
     const token = this.getToken();
-    return token;
+    return token && !this.isTokenExpired(token);
   }
   
   isTokenExpired(token: string) {
@@ -27,8 +27,9 @@ class AuthService {
 
   getToken(): string {
     // TODO: return the token
-    const loggedUser = localStorage.getItem('id_token') || '';
-    return loggedUser;
+    // const loggedUser = localStorage.getItem('id_token') || '';
+    // return loggedUser;
+    return localStorage.getItem('id_token') || '';
   }
 
   login(idToken: string) {
@@ -42,7 +43,7 @@ class AuthService {
     // TODO: remove the token from localStorage
     // TODO: redirect to the login page
     localStorage.removeItem('id_token');
-    window.location.assign('/');
+    window.location.assign('/login');
   }
 }
 
