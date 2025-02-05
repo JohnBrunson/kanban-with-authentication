@@ -2,11 +2,11 @@
 
 ## Description
 
-The point behind this assignment was to explore JWTs and making them work within the context of a finished application. The idea is to learn how an authorization system should work and hopefully acting as a springboard into making other application requiring authorization work properly.
+The point behind this experiment was to explore JWTs and making them work within the context of a finished application. The idea is to learn how an authorization system should work and hopefully acting as a springboard into making other application requiring authorization work properly.
 
 ## Installation
 
-For a full "production" version, simply navigate to the render app. The link will be provided shortly.
+For a full "production" version, simply navigate to the [render app](https://kanban-with-authentication.onrender.com).
 
 If you're looking to download and play with what I've built, simply clone a copy of the code and then run `npm run start`
 
