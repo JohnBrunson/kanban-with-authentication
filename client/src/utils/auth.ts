@@ -1,6 +1,4 @@
 import { JwtPayload, jwtDecode } from 'jwt-decode';
-// trying this to fix render issue...
-import { useNavigate } from 'react-router-dom'
 //added for the get profile function
 import type { UserData } from '../interfaces/UserData';
 class AuthService {
