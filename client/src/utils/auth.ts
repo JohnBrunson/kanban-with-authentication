@@ -1,4 +1,6 @@
 import { JwtPayload, jwtDecode } from 'jwt-decode';
+// trying this to fix render issue...
+import { useNavigate } from 'react-router-dom'
 //added for the get profile function
 import type { UserData } from '../interfaces/UserData';
 class AuthService {
@@ -43,8 +45,9 @@ class AuthService {
     // TODO: remove the token from localStorage
     // TODO: redirect to the login page
     localStorage.removeItem('id_token');
-    window.location.assign('/login');
+    // window.location.assign('/login');
   }
+
 }
 
 export default new AuthService();

@@ -18,10 +18,12 @@ const Board = () => {
   const navigate = useNavigate();
 
   // const checkLogin = () => {
-  //   if(auth.loggedIn()) {
+  //   if (auth.loggedIn()) {
   //     setLoginCheck(true);
   //   }
   // };
+
+  //might be a duplicate function to fix later.
   const checkLogin = () => {
     const token = auth.getToken();
     if (token && !auth.isTokenExpired(token)) {
